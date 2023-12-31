@@ -1,12 +1,16 @@
- function dom() {
-    // Code to execute when the DOM is fully loaded
-	  var body = document.body;
-	  if (body.childElementCount === 0) {
-    var message = document.createElement('p');
-    message.textContent = 'DOM load success';
-	   body.appendChild(message);
-	  }
- }
+ function onDOMLoad() {
+      // Get the body element of the document
+      var body = document.body;
 
-document.addEventListener('DOMContentLoaded', dom);
-	 
+      // Create a new paragraph element
+      var paragraph = document.createElement('p');
+
+      // Set the text content of the paragraph
+      paragraph.textContent = "DOM load success";
+
+      // Append the paragraph to the body
+      body.appendChild(paragraph);
+    }
+
+    // Event listener for DOMContentLoaded event
+    document.addEventListener('DOMContentLoaded', onDOMLoad);
